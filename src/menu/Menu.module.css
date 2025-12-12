@@ -1,0 +1,127 @@
+.title {
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.center {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+  backdrop-filter: blur(1vh);
+}
+
+.center:first-of-type {
+  top: 0;
+  bottom: auto;
+}
+
+.center:last-of-type {
+  bottom: 0;
+  top: auto;
+  padding: 2% 0;
+}
+
+.list {
+  padding-top: 20%; 
+  padding-bottom: 30%;
+}
+
+.note {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5%;
+  width: 82.5vw;
+  padding: 5%;
+  background-color: #101010;
+  border-radius: 8px;
+}
+.note h2, .note p {
+  padding: 0;
+  margin: 0;
+}
+.note button {
+  padding: 2%;
+}
+
+
+.center button {
+    font-size: 2em;
+}
+
+.dialogbg {
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(0.2vh);
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+}
+.dialog {
+  width: 80vw;
+  padding: 5%;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: #242424;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 8px;
+}
+.dialog h1, p {
+  margin: 0;
+}
+.dialog p {
+  margin-bottom: 3%;
+  font-size: 1.5em;
+}
+.dialog input, button {
+  font-size: 1.5em;
+}
+.dialog input {
+  margin-bottom: 3%;
+}
+
+.popup {
+  margin: 0;
+  width: 80vw;
+  padding: 5%;
+  bottom: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #242424;
+  box-shadow: 0px -5px 10px black;
+  border-radius: 8px;
+}
+.popup div {
+  border-radius: 2vw;
+  background-color: white;
+  width: 20%;
+  padding: 1.5%;
+  margin-bottom: 4%;
+  opacity: 0.5;
+  text-align: center;
+}
+.popup button {
+  width: 100%;
+  margin: 2%;
+}
+.popup h1 {
+  margin: 0;
+}
+.popup p {
+  font-size: 1.2em;
+}
