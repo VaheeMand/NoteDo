@@ -51,7 +51,7 @@ function Menu() {
     setdialogshow(false)
   }
   const openNote = (note) => {
-    nav(`Note/${note}`)
+    nav(`/Note/${note}`)
   }
   return (<>
     {dialogshow ? (

@@ -2,8 +2,8 @@ import { v4 as uuidv4 } from 'uuid'
 
 const noteslist = []
 
-export function getNote(note) {
-  return noteslist[note]
+export function getNote(noteid) {
+  return noteslist.find(note => note.id === noteid)
 }
 
 export function getNotes() {
@@ -13,8 +13,16 @@ export function getNotes() {
 export function addNote(note) {
   noteslist.push({id: uuidv4(),
     name: note,
-    desc: "Description of the note"})
+    desc: "Description of the note",
+    content: "# Welcome to your note!"
+  })
   return [...noteslist]
+}
+export function setContent(id, content) {
+  const note = noteslist.find(note => note.id === id)
+  if (note) {
+    note.content = content
+  }
 }
 
 export function renameNote(id, newName) {

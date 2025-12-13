@@ -1,0 +1,11 @@
+.noteName {
+  position: fixed;
+  text-align: center;
+  backdrop-filter: blur(1vh);
+  width: 100%;
+  top: 0;
+}
+
+.editor {
+  height: 100%;
+}
