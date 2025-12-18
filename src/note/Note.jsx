@@ -16,8 +16,11 @@ function Note(props) {
   }
   return (<>
     <div className={styles.toolBar}>
-      <h1 className={styles.noteName}>{note.name}</h1>
-      <p>{note.desc}</p>
+      <button>⋮</button>
+      <div>
+        <h1>{note.name}</h1>
+        <p>{note.desc}</p>
+      </div>
       <button onClick={() => setMode(!editmode)}>{editmode ? "Preview": "Editor"}</button>
     </div>
     <div className={styles.editor}>
