@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  width: 80vw;
+  margin: 1px;
+  padding: 9vw;
+  flex-direction: column;
+  justify-content: center;
+}
+.container label {
+  font-size: 1.5em;
+}
+.container input {
+  font-size: 1.2em;
+}
+.container details {
+  font-size: 1.5em;
+}
+.container details input {
+  font-size: 1.2rem;
+}
+
+.iddiv button {
+  font-size: 1em;
+  margin-left: 2%;
+  width: 25%;
+}
+.iddiv input {
+  width: 70%;
+}
+
+.savebtn {
+  margin-bottom: 4%;
+}

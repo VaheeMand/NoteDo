@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import MDEditor, { commands, EditorContext } from "@uiw/react-md-editor"
 import { getNote, setContent } from '../notes.js'
+import Info from './Info.jsx'
 import styles from './Note.module.css'
 
 function Note(props) {
@@ -14,9 +15,12 @@ function Note(props) {
     setCont(value)
     setContent(note.id, value)
   }
+  const openInfo = () => {
+    nav(`/Note/info/${note.id}`)
+  }
   return (<>
     <div className={styles.toolBar}>
-      <button>⋮</button>
+      <button onClick={openInfo}>⋮</button>
       <div>
         <h1>{note.name}</h1>
         <p>{note.desc}</p>

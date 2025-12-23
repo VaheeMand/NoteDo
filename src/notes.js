@@ -49,7 +49,16 @@ export function setContent(id, content) {
 export function renameNote(id, newName) {
   const note = noteslist.find(note => note.id === id)
   if (note) {
-    note.name = newName.trim() || "Без названия"
+    note.name = newName.trim() || "Unnamed note"
+    saveNotes()
+  }
+  return [...noteslist]
+}
+
+export function setDescription(id, newDesc) {
+  const note = noteslist.find(note => note.id === id)
+  if (note) {
+    note.desc = newDesc.trim() || "No description"
     saveNotes()
   }
   return [...noteslist]
