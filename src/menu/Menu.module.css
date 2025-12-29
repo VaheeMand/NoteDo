@@ -37,7 +37,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 5%;
-  width: 82.5vw;
+  width: 80%;
   padding: 5%;
   background-color: #101010;
   border-radius: 8px;
@@ -56,27 +56,21 @@
 }
 
 .dialogbg {
-  z-index: 5;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
   position: fixed;
-  top: 0;
+  inset: 0;
   backdrop-filter: blur(0.2vh);
   background-color: rgba(0, 0, 0, 0.4);
-  width: 100vw;
-  height: 100vh;
 }
 .dialog {
   width: 80vw;
   padding: 5%;
-  transform: translateY(100%);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
   background-color: #242424;
   box-shadow: 5px 5px 10px black;
-  border-radius: 8px;
 }
 .dialog h1, p {
   margin: 0;
@@ -96,15 +90,12 @@
   margin: 0;
   width: 80vw;
   padding: 5%;
-  bottom: 2.5%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
   background-color: #242424;
   box-shadow: 0px -5px 10px black;
-  border-radius: 8px;
+  align-self: flex-end;
+  margin-bottom: 4vh;
 }
 .popup div {
   border-radius: 2vw;
@@ -124,4 +115,17 @@
 }
 .popup p {
   font-size: 1.2em;
+}
+
+.dialog,
+.popup {
+  position: static; /* убираем fixed и transform/bottom */
+  transform: none !important; /* на всякий случай */
+  width: 80vw;
+  max-width: 400px; /* опционально, чтобы не растягивалось на планшетах */
+  padding: 5%;
+  background-color: #242424;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }

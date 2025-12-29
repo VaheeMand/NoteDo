@@ -28,16 +28,18 @@ export function getNote(noteid) {
 export function getNotes() {
   return noteslist
 }
-
-export function addNote(note) {
-  noteslist.push({id: uuidv4(),
-    name: note,
-    desc: "Description of the note",
-    content: "# Welcome to your note!"
-  })
-  saveNotes()
-  return [...noteslist]
+export function addNote(name) {
+  const trimmed = name.trim() || "Unnamed note";
+  const newNote = {
+    id: uuidv4(),
+    name: trimmed,
+    desc: "No description",
+    content: "# " + trimmed
+  };
+  noteslist.push(newNote);
+  saveNotes();
 }
+
 export function setContent(id, content) {
   const note = noteslist.find(note => note.id === id)
   if (note) {

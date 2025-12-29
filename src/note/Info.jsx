@@ -24,7 +24,7 @@ function Info() {
       <label>Id: </label>
       <div className={styles.iddiv}>
         <input value={note.id} readOnly={true}></input>
-        <button>Copy</button>
+        <button onClick={() => navigator.clipboard.writeText(note.id)}>Copy</button>
       </div>
       <br />
       <button className={styles.savebtn} onClick={() => {

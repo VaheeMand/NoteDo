@@ -18,7 +18,7 @@ function Note(props) {
   const openInfo = () => {
     nav(`/Note/info/${note.id}`)
   }
-  return (<>
+  return (<div className={styles.noteContainer}>
     <div className={styles.toolBar}>
       <button onClick={openInfo}>⋮</button>
       <div>
@@ -31,7 +31,7 @@ function Note(props) {
       {editmode ? <MDEditor value={content} preview="edit" onChange={setValue} extraCommands={[commands.fullscreen]} />:
       <MDEditor.Markdown source={content} style={{ whiteSpace: 'pre-wrap' }} />}
     </div>
-  </>)
+  </div>)
 }
 
 export default Note
